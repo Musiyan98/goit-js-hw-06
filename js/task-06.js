@@ -1,9 +1,12 @@
 const inputEl = document.querySelector("#validation-input");
+const correctlyLengthEl = document.querySelector("input[data-length]");
+
+
 
 inputEl.addEventListener("input", onAuditCorrect);
 
 function onAuditCorrect(e) {
-  if (inputEl.value.length === 6) {
+  if (inputEl.value.length === correctlyLengthEl.value) {
     inputEl.classList.add("valid");
     inputEl.classList.remove("invalid");
   } else {
